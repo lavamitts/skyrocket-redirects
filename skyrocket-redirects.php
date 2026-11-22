@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Skyrocket Redirects
  * Description: Manage exact-path 301 and 410 redirects from an editable CSV file.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Skyrocket Digital Development
  * License: GPL-2.0-or-later
  */
