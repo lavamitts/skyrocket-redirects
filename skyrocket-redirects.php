@@ -9,6 +9,20 @@
 
 defined('ABSPATH') || exit;
 
+// GitHub updater configuration
+$github_updater_config = [
+    'username' => 'lavamitts',
+    'repository' => 'skyrocket-redirects',
+    'plugin_file' => __FILE__,
+];
+
+// Updater code
+require_once __DIR__ . '/vendor/lavamitts/skyrocket-plugin-updater/src/plugin-updater.php';
+
+
+// Remove the temporary configuration variable.
+unset($github_updater_config);
+
 final class Site_Redirects_CSV
 {
     private const PAGE_SLUG = 'site-redirects-csv';

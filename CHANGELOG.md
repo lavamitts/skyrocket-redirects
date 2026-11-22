@@ -8,3 +8,7 @@
 
 - Rename as skyrocket redirects
 - Assign ownership
+
+## 1.0.2 - Add in update code
+
+- Add in update code
