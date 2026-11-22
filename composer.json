@@ -1,0 +1,20 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/lavamitts/skyrocket-plugin-updater"
+        }
+    ],
+    "require-dev": {
+        "lavamitts/skyrocket-plugin-updater": "^1.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@make-updater-builder-executable"
+        ],
+        "post-update-cmd": [
+            "@make-updater-builder-executable"
+        ],
+        "make-updater-builder-executable": "chmod +x vendor/lavamitts/skyrocket-plugin-updater/tools/build-distribution.sh"
+    }
+}
