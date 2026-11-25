@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Skyrocket Redirects
  * Description: Manage exact-path 301 and 410 redirects from an editable CSV file.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Skyrocket Digital Development
  * License: GPL-2.0-or-later
  */
@@ -106,7 +106,7 @@ final class Site_Redirects_CSV
             return array(array(), array('The CSV file could not be opened.'));
         }
 
-        $header = fgetcsv($handle);
+        $header = fgetcsv($handle, null, ',', '"', '');
         if (false === $header) {
             fclose($handle);
             return array(array(), array('The CSV file is empty.'));
@@ -123,7 +123,7 @@ final class Site_Redirects_CSV
         }
 
         $line = 1;
-        while (false !== ($data = fgetcsv($handle))) {
+        while (false !== ($data = fgetcsv($handle, null, ',', '"', ''))) {
             ++$line;
             if (empty($data) || (1 === count($data) && '' === trim((string) $data[0]))) {
                 continue;

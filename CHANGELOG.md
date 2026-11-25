@@ -12,3 +12,7 @@
 ## 1.0.2 - Add in update code
 
 - Add in update code
+
+## 1.0.3 - fgetcsv deprecation fix
+
+- fgetcsv deprecation fix
